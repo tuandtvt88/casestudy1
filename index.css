@@ -1,0 +1,395 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+.container {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas: 
+    "header"
+    "nav-bar"
+    "main";
+    grid-template-rows: 50px 34px 1fr;
+}
+.header {
+    grid-area: header;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+}
+.logo24h {
+    height: 100%;
+    width: 120px;
+    margin-left: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #ebebeb;
+}
+.logo24h img {
+    height:90%;
+    width: 90%;
+    margin-right: 15px;
+}
+.logoasiacup {
+    width: 140px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoasiacup img {
+    width: 75%;
+    height: 75%;
+
+}
+.chao2024 {
+    width: 140px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 440px;
+    border-right: 2px solid #ebebeb;
+}
+.chao2024 img {
+    width: 60%;
+    height: auto
+}
+.search {
+    width: 192px;
+    height: 33px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ebebeb;
+    border-radius: 15px;
+    margin-top: 8px;
+}
+.search div {
+    width: 192px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search div input {
+    font-family: Arial;
+    font-size: 14px;
+}
+.search div input, .search div button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.nav-bar {
+    display: flex;
+    grid-area: nav-bar;
+    height: 34px;
+    width: 100%;
+    background-color: chartreuse;
+    position: relative;
+}
+.home {
+position: absolute;
+z-index: 1;
+width: 40px;
+height: 100%;
+bottom: -1px;
+margin-left: 205px;
+border-left: 1px solid white;
+}
+.home i {
+    height: 100%;
+    width: 100%;
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+.menu {
+display: flex;
+position: absolute;
+width: 968px;
+height: 100%;
+margin-left: 250px;
+justify-content: right;
+align-items: center;
+}
+.menu .item1 {
+    font-family: Arial;
+    font-size: 12px;
+    margin-left: -42px;
+    color: white;
+}
+
+.item-tintuc .item1{
+    width: 200px;
+    height: 230px;
+    background-color: white;
+    position: absolute; /* nó sẽ được di chuyển đến vị trí mà không ảnh hưởng đến vị trí của các phần tử khác xung quanh nó */
+    top: 36px;
+    left: 43px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s;
+    display: flex;
+    flex-wrap: wrap; /*xuống dòng khi không đủ dòng */
+    z-index: 1;
+}
+.item-tintuc {
+    height: 35px;
+    width: 62px;
+    color: white;
+    font-size: 14px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+.item1 .tintuc {
+    width: 100%;
+    height: 100;
+    color: black;
+    padding: 10px 7px;
+    border-bottom: 1px solid rgb(228, 216, 216);
+    margin: 0 10px;
+}
+.item-tintuc:hover .item1 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.item1 .tintuc:hover, .item2-bd .bongda:hover {
+    background-color:#78ad38;
+}
+.item-tintuc:hover{
+    background-color: #588027;
+}
+.item2 {
+    height: 100%;
+    width: 65px;
+    color: white;
+    font-size: 14px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+.item2:hover{
+    background-color: #588027;
+}
+.item2 .item2-bd{
+    width: 650px;
+    height: 400px;
+    background-color: white;
+    position: absolute; /* nó sẽ được di chuyển đến vị trí mà không ảnh hưởng đến vị trí của các phần tử khác xung quanh nó */
+    top: 36px;
+    left: 80px;
+    visibility: hidden;/* ẩn phần tử */
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s;
+    display: flex;
+    flex-wrap: wrap; /*xuống dòng khi không đủ dòng */
+    z-index: 1;
+}
+.item2-bd .bongda {
+    color: black;
+    padding: 10px 7px;
+    border-bottom: 1px solid rgb(228, 216, 216);
+    margin: 0 10px;
+}
+.item2:hover .item2-bd {
+    visibility: visible;
+    opacity: 1;  
+}
+.item2-db .bongda {
+    width: 32%;
+    padding: 10px 7px;
+
+}
+.item3 {
+    height: 100%;
+    width: 115px;
+    color: white;
+    font-size: 14px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+.item3:hover{
+    background-color: #588027;
+}
+.item4 {
+    height: 100%;
+    width: 90px;
+    color: white;
+    font-size: 14px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+.item4:hover{
+    background-color: #588027;
+}
+.item5 {
+    height: 100%;
+    width: 56px;
+    color: white;
+    font-size: 14px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+.item5:hover{
+    background-color: #588027;
+}
+.item6 {
+    height: 100%;
+    width: 74px;
+    color: white;
+    font-size: 14px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+.item6:hover{
+    background-color: #588027;
+}
+.item7 {
+    height: 100%;
+    width: 59px;
+    color: white;
+    font-size: 14px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+.item7:hover{
+    background-color: #588027;
+}
+.item8 {
+    height: 100%;
+    width: 65px;
+    color: white;
+    font-size: 14px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+.item8:hover{
+    background-color: #588027;
+}
+.item9 {
+    height: 100%;
+    width: 73px;
+    color: white;
+    font-size: 14px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+.item9:hover{
+    background-color: #588027;
+}
+.item10 {
+    height: 100%;
+    width: 63px;
+    color: white;
+    font-size: 14px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+.item10:hover{
+    background-color: #588027;
+}
+.item11 {
+    height: 100%;
+    width: 84px;
+    color: white;
+    font-size: 14px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item11:hover{
+    background-color: #588027;
+}
+.main {
+    grid-area: main;
+    display: flex;
+    margin-top: 20px;
+    width: 1063px;
+    height: 1fr;
+    margin-left: 145px;
+    }
+.main-left {
+    width: 50%;
+    height: 1fr;
+   }
+.main-left-img {
+    width: 100%;
+    height: 60%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+.main-left-img img {
+    width: 100%;
+    height: 100%;
+}
+.main-left-text h3:hover {
+    color: rgb(93, 247, 93);
+}
+.main-center {
+    width: 25%;
+    height: 1fr;
+    padding: 0 10px;
+}
+.sortnew {
+    width: 100%;
+    height: 95px;
+    border-bottom: 1px solid #eaeaea;
+    margin: 10px 0;
+}
+.sortnew h5 {
+    color: rgb(120, 240, 120);
+}
+.sortnew p {
+    margin: 5px 0;
+    font-size: 18px;
+    color: rgb(37, 35, 35);
+}
+.sortnew p:hover {
+    color: rgb(109, 243, 109);
+}
+.main-right {
+    width: 25%;
+    height: 1fr;
+    background-color: rgb(150, 243, 122);
+}
